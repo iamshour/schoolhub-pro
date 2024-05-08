@@ -3,13 +3,15 @@
 //#region Import
 import AppLayout from "@/components/app-layout/app-layout"
 import PATHS from "@/constants/paths"
-import ReportsRoute from "@/features/report-cards/routes/reports-route"
-import TeachersRoute from "@/features/teachers/routes/teachers-route"
 import { lazy } from "react"
 import { RouteObject, useRoutes } from "react-router-dom"
-//#endregion
+
+const ReportsRoute = lazy(() => import("@/features/report-cards/routes/reports-route"))
+
+const TeachersRoute = lazy(() => import("@/features/teachers/routes/teachers-route"))
 
 const StudentsRoute = lazy(() => import("@/features/students/routes/students-route"))
+//#endregion
 
 const routes: RouteObject[] = [
 	{
