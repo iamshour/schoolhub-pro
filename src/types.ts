@@ -7,7 +7,7 @@ export type Grade = Record<"Grade" | "GradeId" | "GradeNumber", string>
 /**
  * Common Identitifier type, used by both Students & Teachers
  */
-export type PersonIndentity = { DateOfBirth: Date } & Record<
-	"Address" | "City" | "Country" | "FirstName" | "LastName" | "MiddleName" | "Phone",
+export type PersonIndentity = { dateOfBirth: Date } & Record<
+	"address" | "city" | "country" | "firstName" | "lastName" | "middleName" | "phone",
 	string
 >

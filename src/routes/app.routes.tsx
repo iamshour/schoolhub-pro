@@ -6,11 +6,11 @@ import PATHS from "@/constants/paths"
 import { lazy } from "react"
 import { RouteObject, useRoutes } from "react-router-dom"
 
-const ReportsRoute = lazy(() => import("@/features/report-cards/routes/reports-route"))
+const ReportsRoute = lazy(() => import("@/features/report-cards/route"))
 
-const TeachersRoute = lazy(() => import("@/features/teachers/routes/teachers-route"))
+const TeachersRoute = lazy(() => import("@/features/teachers/route"))
 
-const StudentsRoute = lazy(() => import("@/features/students/routes/students-route"))
+const StudentsRoute = lazy(() => import("@/features/students/route"))
 //#endregion
 
 const routes: RouteObject[] = [

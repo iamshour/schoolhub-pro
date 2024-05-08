@@ -20,7 +20,7 @@ const AppLayout = () => {
 			</Suspense>
 
 			<div className='min-h-full flex-1 p-4'>
-				<Suspense fallback={<Skeleton className='h-full rounded-full' />}>
+				<Suspense fallback={<Skeleton className='h-full rounded-xl' />}>
 					<Outlet />
 				</Suspense>
 			</div>

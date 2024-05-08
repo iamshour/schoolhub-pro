@@ -2,4 +2,4 @@
 import type { PersonIndentity } from "@/types"
 //#endregion
 
-export type Student = { studentId: string } & PersonIndentity
+export type Student = PersonIndentity & Record<"classId" | "studentId", string>
