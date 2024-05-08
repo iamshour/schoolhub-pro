@@ -29,7 +29,9 @@
 		"paths": {
 			"@/*": ["./src/*"],
 			"@/public/*": ["./public/*"]
-		}
+		},
+
+		"types": ["unplugin-icons/types/react"]
 	},
 	"include": ["src"],
 	"exclude": ["dist", "build", "node_modules"]

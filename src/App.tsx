@@ -1,9 +1,13 @@
-const App = () => {
-	return (
-		<div>
-			<div>Main Page here!!...</div>
-		</div>
-	)
-}
+//#region Import
+import { BrowserRouter as Router } from "react-router-dom"
+
+import AppRoutes from "./routes/app.routes"
+//#endregion
+
+const App = () => (
+	<Router>
+		<AppRoutes />
+	</Router>
+)
 
 export default App
