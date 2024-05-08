@@ -19,7 +19,7 @@ const AppLayout = () => {
 				<MobileNavbar />
 			</Suspense>
 
-			<div className='h-full flex-1 overflow-y-auto px-4'>
+			<div className='min-h-full flex-1 p-4'>
 				<Suspense fallback={<Skeleton className='h-full rounded-full' />}>
 					<Outlet />
 				</Suspense>

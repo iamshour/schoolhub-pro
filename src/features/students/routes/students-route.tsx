@@ -1,6 +1,8 @@
-import { DataTable } from "@/components/ui/data-table"
+//#region Import
+import DataTable from "@/components/ui/data-table"
 
 import { columns, Payment } from "../columns"
+//#endregion
 
 function getData(): Payment[] {
 	return [
@@ -16,11 +18,7 @@ function getData(): Payment[] {
 const StudentsRoute = () => {
 	const data = getData()
 
-	return (
-		<div className='mx-auto py-10'>
-			<DataTable columns={columns} data={data} />
-		</div>
-	)
+	return <DataTable columns={columns} data={data} />
 }
 
 export default StudentsRoute
