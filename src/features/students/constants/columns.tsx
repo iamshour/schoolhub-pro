@@ -1,12 +1,11 @@
-/* eslint-disable perfectionist/sort-objects,react-refresh/only-export-components*/
+/* eslint-disable perfectionist/sort-objects*/
 
 //#region Import
-import { ColumnDef } from "@tanstack/react-table"
-import { lazy } from "react"
+import type { ColumnDef } from "@tanstack/react-table"
 
 import type { Student } from "../types"
 
-const StudentsTableActions = lazy(() => import("../components/table-actions"))
+import StudentsTableActions from "../components/table-actions"
 //#endregion
 
 const studentsTableColumns: ColumnDef<Student>[] = [

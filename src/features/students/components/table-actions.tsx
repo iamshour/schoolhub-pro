@@ -17,15 +17,14 @@ const StudentsTableActions = ({ studentId }: Pick<Student, "studentId">) => (
 			</Button>
 		</Dropdown.Trigger>
 		<Dropdown.Content align='end'>
-			<Dropdown.Label>Actions</Dropdown.Label>
-			<Dropdown.Separator />
-
 			<ViewStudentDialog studentId={studentId}>
-				<Dropdown.Item>View Student Details</Dropdown.Item>
+				<Dropdown.Item>View Details</Dropdown.Item>
 			</ViewStudentDialog>
 
+			<Dropdown.Separator />
+
 			<EditStudentDialog studentId={studentId}>
-				<Dropdown.Item>Edit Student Details</Dropdown.Item>
+				<Dropdown.Item>Edit Details</Dropdown.Item>
 			</EditStudentDialog>
 		</Dropdown.Content>
 	</Dropdown>

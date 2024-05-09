@@ -19,6 +19,7 @@ import {
 import LucideCheck from "~icons/lucide/check"
 import LucideChevronRight from "~icons/lucide/chevron-right"
 import LucideCircle from "~icons/lucide/circle"
+import { forwardRef } from "react"
 import { twMerge } from "tailwind-merge"
 //#endregion
 
@@ -67,20 +68,26 @@ const DropdownContent = ({ className, sideOffset = 4, ...props }: React.Componen
 	</Portal>
 )
 
-const DropdownItem = ({
-	className,
-	inset,
-	...props
-}: { inset?: boolean } & React.ComponentPropsWithoutRef<typeof Item>) => (
+const DropdownItem = forwardRef<
+	React.ElementRef<typeof Item>,
+	{ inset?: boolean } & React.ComponentPropsWithoutRef<typeof Item>
+>(({ className, inset, onSelect, ...props }, ref) => (
 	<Item
 		className={twMerge(
 			"relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-slate-100 focus:text-slate-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-800 dark:focus:text-slate-50",
 			inset && "pl-8",
 			className
 		)}
+		onSelect={(event) => {
+			event.preventDefault()
+			onSelect && onSelect(event)
+		}}
+		ref={ref}
 		{...props}
 	/>
-)
+))
+
+DropdownItem.displayName = "DropdownItem"
 
 const DropdownCheckboxItem = ({
 	children,
