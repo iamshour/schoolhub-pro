@@ -8,7 +8,7 @@ import { forwardRef } from "react"
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const buttonVariants = cva(
-	"inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-slate-300",
+	"inline-flex-center relative overflow-hidden whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-slate-300",
 	{
 		defaultVariants: {
 			size: "default",
@@ -51,7 +51,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 				{children}
 
 				{loading && (
-					<div className='absolute inset-0 z-10 h-full w-full bg-[rgba(255,255,255,0.7)] text-black backdrop-blur-xl flex-center'>
+					<div className='absolute inset-[1px] z-10 !rounded-md bg-[rgba(255,255,255,0.7)] text-black backdrop-blur-md flex-center'>
 						<SvgSpinnersRingResize className='text-current' />
 					</div>
 				)}

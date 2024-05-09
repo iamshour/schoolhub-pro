@@ -5,9 +5,8 @@ import Input from "@/components/ui/input"
 import SimplePhoneInput from "@/components/ui/simple-phone-input"
 import Textarea from "@/components/ui/textarea"
 import { zodResolver } from "@hookform/resolvers/zod"
+import dayjs from "dayjs"
 import { useForm, type UseFormReturn } from "react-hook-form"
-
-import type { Student } from "../types"
 
 import studentSchema, { type StudentSchemaType } from "../constants/student-schema"
 //#endregion
@@ -17,7 +16,7 @@ interface StudentFormProps {
 
 	defaultValues?: StudentSchemaType
 
-	onSubmit: (data: Partial<Student>, form: UseFormReturn<StudentSchemaType>) => void
+	onSubmit: (data: StudentSchemaType, form: UseFormReturn<StudentSchemaType>) => void
 }
 
 const StudentForm = ({ children, defaultValues, onSubmit }: StudentFormProps) => {
@@ -97,7 +96,20 @@ const StudentForm = ({ children, defaultValues, onSubmit }: StudentFormProps) =>
 							name='dateOfBirth'
 							render={({ field }) => (
 								<Form.Item label='Date of Birth'>
-									<Input placeholder='Type date of birth' type='date' {...field} value={field.value as any} />
+									<Input
+										onChange={(e) => {
+											const inputValue = e.target.value
+
+											const dateInIso = dayjs(inputValue).toISOString()
+
+											if (!dayjs(inputValue).isValid()) return
+
+											field.onChange(dateInIso)
+										}}
+										placeholder='Type date of birth'
+										type='date'
+										value={field.value ? dayjs(field.value).format("YYYY-MM-DD") : ""}
+									/>
 								</Form.Item>
 							)}
 						/>
