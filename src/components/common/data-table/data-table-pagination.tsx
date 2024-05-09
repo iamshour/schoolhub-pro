@@ -1,12 +1,11 @@
 //#region Import
+import Button from "@/components/ui/button"
+import Select from "@/components/ui/select"
 import { Table } from "@tanstack/react-table"
 import LucideChevronLeft from "~icons/lucide/chevron-left"
 import LucideChevronRight from "~icons/lucide/chevron-right"
 import LucideChevronsLeft from "~icons/lucide/chevrons-left"
 import LucideChevronsRight from "~icons/lucide/chevrons-right"
-
-import Button from "./button"
-import Select from "./select"
 //#endregion
 
 interface DataTablePaginationProps<TData> {
@@ -15,7 +14,7 @@ interface DataTablePaginationProps<TData> {
 
 export default function DataTablePagination<TData>({ table }: DataTablePaginationProps<TData>) {
 	return (
-		<div className='flex items-center justify-between px-2'>
+		<div className='flex items-center justify-between border-t p-3'>
 			<div className='flex items-center space-x-2'>
 				<p className='text-sm font-medium'>Rows per page</p>
 				<Select

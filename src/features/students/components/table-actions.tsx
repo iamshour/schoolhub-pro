@@ -1,29 +1,34 @@
 //#region Import
 import Button from "@/components/ui/button"
-import Dropdown from "@/components/ui/dropdown-menu"
+import Dropdown from "@/components/ui/dropdown"
 import LucideEllipsis from "~icons/lucide/ellipsis"
 
+import EditStudentDialog from "../dialogs/edit-student-dialog/edit-student-dialog"
+import ViewStudentDialog from "../dialogs/view-student-dialog/view-student-dialog"
 import { Student } from "../types"
 //#endregion
 
-const StudentsTableActions = ({ studentId }: Pick<Student, "studentId">) => {
-	return (
-		<Dropdown>
-			<Dropdown.Trigger asChild>
-				<Button className='h-8 w-8 p-0' variant='ghost'>
-					<span className='sr-only'>Open menu</span>
-					<LucideEllipsis className='h-4 w-4' />
-				</Button>
-			</Dropdown.Trigger>
-			<Dropdown.Content align='end'>
-				<Dropdown.Label>Actions</Dropdown.Label>
-				<Dropdown.Item onClick={() => navigator.clipboard.writeText(studentId)}>Copy payment ID</Dropdown.Item>
-				<Dropdown.Separator />
-				<Dropdown.Item>View customer</Dropdown.Item>
-				<Dropdown.Item>View payment details</Dropdown.Item>
-			</Dropdown.Content>
-		</Dropdown>
-	)
-}
+const StudentsTableActions = ({ studentId }: Pick<Student, "studentId">) => (
+	<Dropdown modal={false}>
+		<Dropdown.Trigger asChild>
+			<Button className='h-8 w-8 p-0' variant='ghost'>
+				<span className='sr-only'>Open menu</span>
+				<LucideEllipsis className='h-4 w-4' />
+			</Button>
+		</Dropdown.Trigger>
+		<Dropdown.Content align='end'>
+			<Dropdown.Label>Actions</Dropdown.Label>
+			<Dropdown.Separator />
+
+			<ViewStudentDialog studentId={studentId}>
+				<Dropdown.Item>View Student Details</Dropdown.Item>
+			</ViewStudentDialog>
+
+			<EditStudentDialog studentId={studentId}>
+				<Dropdown.Item>Edit Student Details</Dropdown.Item>
+			</EditStudentDialog>
+		</Dropdown.Content>
+	</Dropdown>
+)
 
 export default StudentsTableActions
