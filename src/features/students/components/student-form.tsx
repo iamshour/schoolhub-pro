@@ -2,6 +2,7 @@
 import Footer from "@/components/common/footer"
 import Form from "@/components/ui/form"
 import Input from "@/components/ui/input"
+import SimplePhoneInput from "@/components/ui/simple-phone-input"
 import Textarea from "@/components/ui/textarea"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm, type UseFormReturn } from "react-hook-form"
@@ -66,7 +67,7 @@ const StudentForm = ({ children, defaultValues, onSubmit }: StudentFormProps) =>
 							name='phone'
 							render={({ field }) => (
 								<Form.Item label='Phone'>
-									<Input placeholder='Type phone number' type='tel' {...field} className='w-[340px]' />
+									<SimplePhoneInput {...field} className='w-[340px]' placeholder='Type phone number' />
 								</Form.Item>
 							)}
 						/>
