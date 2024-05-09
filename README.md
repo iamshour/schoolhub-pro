@@ -44,3 +44,7 @@ pnpm i
 ```bash
 pnpm run dev
 ```
+
+### Production
+
+Whilst the app is already deployed on Vercel, we can also start a production build locally, which i uitlitzed a tool to visual bundle size with.

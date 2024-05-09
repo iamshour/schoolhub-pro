@@ -14,7 +14,7 @@ const StudentsRoute = () => {
 
 	return (
 		<div className='flex h-full flex-col gap-4 overflow-hidden'>
-			<DataTableHeader onChange={() => console.log("first")} value=''>
+			<DataTableHeader>
 				<AddStudentDialog>
 					<Button className='gap-2' size='sm'>
 						<span className='sr-only sm:not-sr-only sm:whitespace-nowrap'>Add Student</span>
