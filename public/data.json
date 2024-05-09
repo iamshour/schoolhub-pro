@@ -1,0 +1,239 @@
+{
+	"students": [
+		{
+			"studentId": "663b7e38c1844cf13ac185e3",
+			"classId": "663b7e3859f43e8c75edce4f",
+			"firstName": "Castro",
+			"middleName": "Harding",
+			"lastName": "Branch",
+			"dateOfBirth": "2004-11-02T04:09:16-02:00",
+			"address": "218 Dover Street, 5686",
+			"city": "Conestoga",
+			"country": "Saudi Arabia",
+			"phone": "+961 81042123"
+		},
+		{
+			"studentId": "663b7e38c9a89bb5509cab59",
+			"classId": "663b7e3843c50e71179dda96",
+			"firstName": "Malone",
+			"middleName": "Valeria",
+			"lastName": "Guerra",
+			"dateOfBirth": "2000-03-21T06:01:53-02:00",
+			"address": "858 Marconi Place, 5062",
+			"city": "Lookingglass",
+			"country": "Malaysia",
+			"phone": "+961 98350734"
+		}
+	],
+	"teachers": [
+		{
+			"teacherId": "663b7df235742c98f810819e",
+			"firstName": "Best",
+			"middleName": "Jeanie",
+			"lastName": "Chandler",
+			"dateOfBirth": "2002-09-11T10:24:07-03:00",
+			"address": "809 Abbey Court, 4203",
+			"city": "Somerset",
+			"country": "Central African Republic",
+			"phone": "+961 92455227"
+		},
+		{
+			"teacherId": "663b7df22bc4f20bd2c0551f",
+			"firstName": "Twila",
+			"middleName": "Althea",
+			"lastName": "Bright",
+			"dateOfBirth": "2002-05-12T02:10:29-03:00",
+			"address": "881 Russell Street, 827",
+			"city": "Kylertown",
+			"country": "United Arab Emirates",
+			"phone": "+961 90651635"
+		},
+		{
+			"teacherId": "663b7df2d02524dd3bdc69dc",
+			"firstName": "Staci",
+			"middleName": "Angelica",
+			"lastName": "Mckay",
+			"dateOfBirth": "2003-08-06T06:51:55-03:00",
+			"address": "762 Bergen Court, 3336",
+			"city": "Germanton",
+			"country": "Macau",
+			"phone": "+961 85254826"
+		},
+		{
+			"teacherId": "663b7df2341bd8e4344ffc6f",
+			"firstName": "Elinor",
+			"middleName": "Eva",
+			"lastName": "Haney",
+			"dateOfBirth": "2004-12-28T02:58:07-02:00",
+			"address": "468 Nassau Street, 2713",
+			"city": "Guilford",
+			"country": "Ukraine",
+			"phone": "+961 97841128"
+		},
+		{
+			"teacherId": "663b7df2b6def9af59aa7539",
+			"firstName": "Joni",
+			"middleName": "Ella",
+			"lastName": "Carson",
+			"dateOfBirth": "2002-05-12T12:07:41-03:00",
+			"address": "961 Hamilton Walk, 6864",
+			"city": "Marne",
+			"country": "Afghanistan",
+			"phone": "+961 80143020"
+		},
+		{
+			"teacherId": "663b7df2a0d20884f8fab5f7",
+			"firstName": "Esperanza",
+			"middleName": "Camacho",
+			"lastName": "Mcbride",
+			"dateOfBirth": "2003-05-01T03:17:23-03:00",
+			"address": "766 Terrace Place, 6422",
+			"city": "Draper",
+			"country": "Yugoslavia",
+			"phone": "+961 87459620"
+		},
+		{
+			"teacherId": "663b7df226d146d56f2423ae",
+			"firstName": "Jefferson",
+			"middleName": "Yvonne",
+			"lastName": "Faulkner",
+			"dateOfBirth": "2001-03-13T08:26:23-02:00",
+			"address": "264 Chester Avenue, 3254",
+			"city": "Jamestown",
+			"country": "Kazakhstan",
+			"phone": "+961 88552334"
+		},
+		{
+			"teacherId": "663b7df2c8d230badefa849e",
+			"firstName": "Bridgett",
+			"middleName": "Riddle",
+			"lastName": "Dennis",
+			"dateOfBirth": "2003-01-31T01:26:11-02:00",
+			"address": "166 Aviation Road, 1245",
+			"city": "Sanders",
+			"country": "Congo",
+			"phone": "+961 84148224"
+		},
+		{
+			"teacherId": "663b7df2bc0a4fc31a05cf51",
+			"firstName": "Hopkins",
+			"middleName": "Claudine",
+			"lastName": "Kennedy",
+			"dateOfBirth": "2002-02-23T01:13:15-02:00",
+			"address": "303 Pilling Street, 7562",
+			"city": "Wright",
+			"country": "Paraguay",
+			"phone": "+961 95752727"
+		},
+		{
+			"teacherId": "663b7df27ca9505d4345f23b",
+			"firstName": "Church",
+			"middleName": "Edith",
+			"lastName": "Combs",
+			"dateOfBirth": "2001-12-02T06:24:31-02:00",
+			"address": "104 Danforth Street, 6671",
+			"city": "Ribera",
+			"country": "Portugal",
+			"phone": "+961 95357436"
+		},
+		{
+			"teacherId": "663b7df2a7d294002cf1ee34",
+			"firstName": "Goodman",
+			"middleName": "Christa",
+			"lastName": "Taylor",
+			"dateOfBirth": "2003-12-05T12:06:44-02:00",
+			"address": "958 Oceanview Avenue, 5105",
+			"city": "Riviera",
+			"country": "New Zealand",
+			"phone": "+961 81557422"
+		},
+		{
+			"teacherId": "663b7df2d6d01391f0ea2ed3",
+			"firstName": "Mueller",
+			"middleName": "Campos",
+			"lastName": "Cunningham",
+			"dateOfBirth": "2002-09-06T07:57:56-03:00",
+			"address": "249 Ira Court, 1694",
+			"city": "Orovada",
+			"country": "Papua New Guinea",
+			"phone": "+961 96153430"
+		},
+		{
+			"teacherId": "663b7df28f40d5be4e5dd693",
+			"firstName": "Mcdaniel",
+			"middleName": "Kathy",
+			"lastName": "Rivers",
+			"dateOfBirth": "2003-03-27T08:56:19-02:00",
+			"address": "369 Maple Street, 425",
+			"city": "Hessville",
+			"country": "Nepal",
+			"phone": "+961 90749130"
+		},
+		{
+			"teacherId": "663b7df2703954c955c95ba4",
+			"firstName": "Shauna",
+			"middleName": "Sweet",
+			"lastName": "Jefferson",
+			"dateOfBirth": "2002-11-25T07:28:50-02:00",
+			"address": "647 Legion Street, 7724",
+			"city": "Jessie",
+			"country": "Slovak Republic",
+			"phone": "+961 83740531"
+		},
+		{
+			"teacherId": "663b7df2e8ce9467e936344e",
+			"firstName": "Eloise",
+			"middleName": "Jerri",
+			"lastName": "Fuentes",
+			"dateOfBirth": "2000-04-06T06:14:29-03:00",
+			"address": "730 Suydam Street, 2476",
+			"city": "Madrid",
+			"country": "Guinea",
+			"phone": "+961 91346728"
+		},
+		{
+			"teacherId": "663b7df2451bcc6021723fd0",
+			"firstName": "Amy",
+			"middleName": "Woodard",
+			"lastName": "Patton",
+			"dateOfBirth": "2002-08-10T01:22:50-03:00",
+			"address": "137 Micieli Place, 1783",
+			"city": "Foscoe",
+			"country": "Liechtenstein",
+			"phone": "+961 90055220"
+		},
+		{
+			"teacherId": "663b7df24d382d06f5295433",
+			"firstName": "Augusta",
+			"middleName": "Dixon",
+			"lastName": "Mitchell",
+			"dateOfBirth": "2003-08-01T05:44:34-03:00",
+			"address": "766 Gates Avenue, 9599",
+			"city": "Rossmore",
+			"country": "Burundi",
+			"phone": "+961 92040226"
+		},
+		{
+			"teacherId": "663b7df2180b69f2c65d0faf",
+			"firstName": "Latasha",
+			"middleName": "Shepherd",
+			"lastName": "Pickett",
+			"dateOfBirth": "2003-07-22T01:09:19-03:00",
+			"address": "259 Lawn Court, 4238",
+			"city": "Tibbie",
+			"country": "Zambia",
+			"phone": "+961 92553920"
+		},
+		{
+			"teacherId": "663b7df2149b9ca949029c2b",
+			"firstName": "Hunt",
+			"middleName": "Fannie",
+			"lastName": "Hill",
+			"dateOfBirth": "2003-07-15T01:03:27-03:00",
+			"address": "142 Eckford Street, 3196",
+			"city": "Stouchsburg",
+			"country": "Uzbekistan",
+			"phone": "+961 80646933"
+		}
+	]
+}
