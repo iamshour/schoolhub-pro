@@ -17,7 +17,7 @@ interface ViewStudentDialogProps extends Pick<Student, "studentId"> {
 const ViewStudentDialog = ({ children, studentId }: ViewStudentDialogProps) => (
 	<Dialog>
 		<Dialog.Trigger asChild>{children}</Dialog.Trigger>
-		<Dialog.Content className='h-[831px] w-[382px] sm:h-[567px] sm:w-[762px]' title='View Student'>
+		<Dialog.Content className='h-[764px] w-[400px] sm:h-[532px] sm:w-[600px]' title='View Student'>
 			<ViewStudentDialogContent studentId={studentId} />
 		</Dialog.Content>
 	</Dialog>

@@ -1,6 +1,7 @@
 //#region Import
 import cn from "@/utils/cn"
 import { Slot } from "@radix-ui/react-slot"
+import SvgSpinnersRingResize from "~icons/svg-spinners/ring-resize"
 import { cva, type VariantProps } from "class-variance-authority"
 import { forwardRef } from "react"
 //#endregion
@@ -38,13 +39,24 @@ export const buttonVariants = cva(
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
 	asChild?: boolean
+	loading?: boolean
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-	({ asChild = false, className, size, variant, ...props }, ref) => {
+	({ asChild = false, children, className, loading = false, size, variant, ...props }, ref) => {
 		const Comp = asChild ? Slot : "button"
 
-		return <Comp className={cn(buttonVariants({ className, size, variant }))} ref={ref} {...props} />
+		return (
+			<Comp className={cn(buttonVariants({ className, size, variant }))} ref={ref} {...props}>
+				{children}
+
+				{loading && (
+					<div className='absolute inset-0 z-10 h-full w-full bg-[rgba(255,255,255,0.7)] text-black backdrop-blur-xl flex-center'>
+						<SvgSpinnersRingResize className='text-current' />
+					</div>
+				)}
+			</Comp>
+		)
 	}
 )
 
