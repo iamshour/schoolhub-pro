@@ -2,9 +2,9 @@
 import type { Student } from "@/features/students/types"
 
 import Skeleton from "@/components/ui/skeleton"
-import { useGetStudentByIdQuery } from "@/features/students/api"
 import dayjs from "dayjs"
 
+import { useGetStudentByIdQuery } from "../../api"
 import studentKeyLabelMapping from "../../constants/student-key-label-mapping"
 //#endregion
 

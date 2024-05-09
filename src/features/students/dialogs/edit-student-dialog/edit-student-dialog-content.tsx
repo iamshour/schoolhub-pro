@@ -2,6 +2,12 @@
 import type { Student } from "@/features/students/types"
 
 import Button from "@/components/ui/button"
+import Skeleton from "@/components/ui/skeleton"
+
+import type { StudentSchemaType } from "../../constants/student-schema"
+
+import { useGetStudentByIdQuery, useUpdateStudentMutation } from "../../api"
+import StudentForm from "../../components/student-form"
 //#endregion
 
 interface EditStudentDialogContentProps extends Pick<Student, "studentId"> {
@@ -12,14 +18,26 @@ interface EditStudentDialogContentProps extends Pick<Student, "studentId"> {
 }
 
 const EditStudentDialogContent = ({ closeDialog, studentId }: EditStudentDialogContentProps) => {
-	console.log({ studentId })
+	const { loading: fetchLoading, student } = useGetStudentByIdQuery(studentId)
+
+	const { loading: updateLoading, updateStudentMutation } = useUpdateStudentMutation()
+
+	const handleUpdate = (newData: StudentSchemaType) => {
+		updateStudentMutation({ ...newData, studentId } as Student).then(closeDialog)
+	}
+
+	if (fetchLoading) return <Skeleton className='h-full' />
 
 	return (
-		<div>
-			<div>Edit Student Dialog Content</div>
+		<StudentForm defaultValues={student} onSubmit={handleUpdate}>
+			<Button className='sm:w-28' onClick={closeDialog} size='sm' type='button' variant='outline'>
+				Close
+			</Button>
 
-			<Button onClick={closeDialog}>Close</Button>
-		</div>
+			<Button className='sm:w-28' loading={updateLoading} size='sm' type='submit'>
+				Submit
+			</Button>
+		</StudentForm>
 	)
 }
 

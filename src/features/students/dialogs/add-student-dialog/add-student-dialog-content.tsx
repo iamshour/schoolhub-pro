@@ -1,6 +1,5 @@
 //#region Import
 import Button from "@/components/ui/button"
-import toast from "react-hot-toast"
 
 import type { StudentSchemaType } from "../../constants/student-schema"
 import type { Student } from "../../types"
@@ -20,13 +19,7 @@ const AddStudentDialogContent = ({ closeDialog }: AddStudentDialogContentProps) 
 	const { addStudentMutation, loading } = useAddStudentMutation()
 
 	const handleSubmit = async (student: StudentSchemaType) => {
-		console.log(student)
-
-		try {
-			await addStudentMutation(student as Student)
-		} catch (error) {
-			toast(String(error))
-		}
+		addStudentMutation(student as Student).then(closeDialog)
 	}
 
 	return (

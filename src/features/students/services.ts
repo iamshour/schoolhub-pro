@@ -25,21 +25,29 @@ export const fetchStudentById = (studentId: Student["studentId"]): Promise<Stude
 		setTimeout(() => {
 			const studentEntries = window.localStorage.getItem("students")
 
-			if (!studentEntries) return reject("No Students Found")
+			if (!studentEntries) {
+				reject("No Students Found")
+
+				return
+			}
 
 			const students: Student[] = JSON.parse(studentEntries) || []
 
 			const studentToFind = students.find((st) => st.studentId === studentId)
 
-			if (!studentToFind) return reject("No Student Found")
+			if (!studentToFind) {
+				reject("No Student Found")
+
+				return
+			}
 
 			resolve(studentToFind)
-		}, 1000)
+		}, 200)
 	})
 
 export const addStudent = (newStudent: Student) =>
 	new Promise((resolve, reject) => {
-		setTimeout(() => {
+		setTimeout(async () => {
 			// Getting all existing students from Browser's storage
 			const studentEntries = window.localStorage.getItem("students")
 
@@ -50,7 +58,11 @@ export const addStudent = (newStudent: Student) =>
 				(["firstName", "middleName", "lastName"] as (keyof Student)[]).every((i) => prevStudent[i] === newStudent[i])
 			)
 
-			if (existingStudent) return reject("A student with the same name already exists")
+			if (existingStudent) {
+				reject("A student with the same name already exists")
+
+				return
+			}
 
 			// Generating unique student and class Ids
 			const studentId = newId()
@@ -63,6 +75,37 @@ export const addStudent = (newStudent: Student) =>
 			// Update localStorage with the updated student list
 			window.localStorage.setItem("students", JSON.stringify(updatedStudents))
 
-			resolve(newStudent)
+			resolve("Success!")
+
+			// Have to reload so that new data in local storage would appear
+			window.location.reload()
+		}, 1500)
+	})
+
+export const updateStudentById = (newStudentData: Student) =>
+	new Promise((resolve) => {
+		setTimeout(async () => {
+			// Getting all existing students from Browser's storage
+			const studentEntries = window.localStorage.getItem("students")
+
+			const students: Student[] = studentEntries ? JSON.parse(studentEntries) : []
+
+			const updatedList = students.map((st) => {
+				if (st.studentId === newStudentData.studentId) {
+					return newStudentData
+				}
+
+				return st
+			})
+
+			console.log(updatedList)
+
+			// Update localStorage with the updated student list
+			window.localStorage.setItem("students", JSON.stringify(updatedList))
+
+			resolve("Success!")
+
+			// Have to reload so that new data in local storage would appear
+			window.location.reload()
 		}, 1500)
 	})

@@ -21,7 +21,7 @@ interface StudentFormProps {
 
 const StudentForm = ({ children, defaultValues, onSubmit }: StudentFormProps) => {
 	const form = useForm<StudentSchemaType>({
-		defaultValues,
+		defaultValues: defaultValues,
 		resolver: zodResolver(studentSchema),
 	})
 
