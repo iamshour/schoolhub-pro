@@ -1,4 +1,4 @@
-/* eslint-disable perfectionist/sort-objects,react-refresh/only-export-components*/
+/* eslint-disable perfectionist/sort-objects*/
 
 //#region Import
 import AppLayout from "@/components/app-layout/app-layout"

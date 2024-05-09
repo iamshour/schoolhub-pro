@@ -1,5 +1,3 @@
-/* eslint-disable perfectionist/sort-objects*/
-
 //#region Import
 import type { ColumnDef } from "@tanstack/react-table"
 
