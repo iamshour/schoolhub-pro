@@ -5,7 +5,7 @@ import { useLocalStorage } from "usehooks-ts"
 
 import type { Teacher } from "./types"
 
-import { addTeacher, fetchTeacherById, fetchTeahcers, updateTeacherById } from "./services"
+import { addTeacher, deleteTeacher, fetchTeacherById, fetchTeahcers, updateTeacherById } from "./services"
 //#endregion
 
 export const useGetTeachersQuery = () => {
@@ -97,4 +97,23 @@ export const useUpdateTeacherMutation = () => {
 	}
 
 	return { loading, updateTeacherMutation }
+}
+
+export const useDeleteTeacherMutation = () => {
+	const [loading, setLoading] = useState(false)
+
+	const deleteTeacherMutation = async (teacherId: string) => {
+		setLoading(true)
+
+		try {
+			await deleteTeacher(teacherId)
+			toast.success("Deleted Successfully")
+			setLoading(false)
+		} catch (error) {
+			setLoading(false)
+			toast(String(error))
+		}
+	}
+
+	return { deleteTeacherMutation, loading }
 }

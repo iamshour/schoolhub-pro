@@ -3,6 +3,7 @@ import Button from "@/components/ui/button"
 import Dropdown from "@/components/ui/dropdown"
 import LucideEllipsis from "~icons/lucide/ellipsis"
 
+import DeleteStudentDialog from "../dialogs/delete-student-dialog/delete-student-dialog"
 import EditStudentDialog from "../dialogs/edit-student-dialog/edit-student-dialog"
 import ViewStudentDialog from "../dialogs/view-student-dialog/view-student-dialog"
 import { Student } from "../types"
@@ -16,16 +17,22 @@ const StudentsTableActions = ({ studentId }: Pick<Student, "studentId">) => (
 				<LucideEllipsis className='h-4 w-4' />
 			</Button>
 		</Dropdown.Trigger>
-		<Dropdown.Content align='end'>
+		<Dropdown.Content align='end' className='min-w-[6rem]'>
 			<ViewStudentDialog studentId={studentId}>
-				<Dropdown.Item>View Details</Dropdown.Item>
+				<Dropdown.Item>View</Dropdown.Item>
 			</ViewStudentDialog>
 
 			<Dropdown.Separator />
 
 			<EditStudentDialog studentId={studentId}>
-				<Dropdown.Item>Edit Details</Dropdown.Item>
+				<Dropdown.Item>Edit</Dropdown.Item>
 			</EditStudentDialog>
+
+			<Dropdown.Separator />
+
+			<DeleteStudentDialog studentId={studentId}>
+				<Dropdown.Item>Delete</Dropdown.Item>
+			</DeleteStudentDialog>
 		</Dropdown.Content>
 	</Dropdown>
 )

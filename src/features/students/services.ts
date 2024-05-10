@@ -98,7 +98,25 @@ export const updateStudentById = (newStudentData: Student) =>
 				return st
 			})
 
-			console.log(updatedList)
+			// Update localStorage with the updated student list
+			window.localStorage.setItem("students", JSON.stringify(updatedList))
+
+			resolve("Success!")
+
+			// Have to reload so that new data in local storage would appear
+			window.location.reload()
+		}, 1500)
+	})
+
+export const deleteStudent = (studentId: Student["studentId"]) =>
+	new Promise((resolve) => {
+		setTimeout(async () => {
+			// Getting all existing students from Browser's storage
+			const studentEntries = window.localStorage.getItem("students")
+
+			const students: Student[] = studentEntries ? JSON.parse(studentEntries) : []
+
+			const updatedList = students.filter((st) => st.studentId !== studentId)
 
 			// Update localStorage with the updated student list
 			window.localStorage.setItem("students", JSON.stringify(updatedList))

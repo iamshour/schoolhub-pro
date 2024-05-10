@@ -107,3 +107,23 @@ export const updateTeacherById = (newTeacherData: Teacher) =>
 			window.location.reload()
 		}, 1500)
 	})
+
+export const deleteTeacher = (teacherId: string) =>
+	new Promise((resolve) => {
+		setTimeout(async () => {
+			// Getting all existing teachers from Browser's storage
+			const teacherEntries = window.localStorage.getItem("teachers")
+
+			const teachers: Teacher[] = teacherEntries ? JSON.parse(teacherEntries) : []
+
+			const updatedList = teachers.filter((st) => st.teacherId !== teacherId)
+
+			// Update localStorage with the updated teachers list
+			window.localStorage.setItem("teachers", JSON.stringify(updatedList))
+
+			resolve("Success!")
+
+			// Have to reload so that new data in local storage would appear
+			window.location.reload()
+		}, 1500)
+	})

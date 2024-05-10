@@ -1,20 +1,15 @@
 //#region Import
-import type { Student } from "@/features/students/types"
-
 import Dialog from "@/components/ui/dialog"
 import { lazy, useState } from "react"
 
 const EditStudentDialogContent = lazy(() => import("./edit-student-dialog-content"))
 //#endregion
 
-interface EditStudentDialogProps extends Pick<Student, "studentId"> {
-	/**
-	 * Trigger Button/Element for triggering Dilaog
-	 */
-	children: React.ReactNode
+interface EditStudentDialogProps extends React.PropsWithChildren {
+	studentId: string
 }
 
-const EditStudentDialog = ({ children, studentId }: EditStudentDialogProps) => {
+const EditStudentDialog: React.FC<EditStudentDialogProps> = ({ children, studentId }) => {
 	const [open, setOpen] = useState(false)
 
 	return (
