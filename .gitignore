@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generated file after each build, using "rollup-plugin-visualizer"
+chunks-report.html
