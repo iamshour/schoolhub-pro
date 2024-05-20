@@ -1,6 +1,10 @@
 # Schoolhub Pro
 
-A simple react Web application bootstraped with Vite, which just shows three main UIs:
+A simple react Web application bootstraped with Vite, which handles adding new students, editing old ones, viewing student
+info, and deleting any student from the list, whilst displaying all students in a paginated Table.
+The application also includes the same functionality but for teachers as well.
+
+Main App UIs:
 
 - Students Interface
 - Teachers Interface
@@ -47,4 +51,4 @@ pnpm run dev
 
 ### Production
 
-Whilst the app is already deployed on Vercel, we can also start a production build locally, which i uitlitzed a tool to visual bundle size with.
+Whilst the app is already deployed on Vercel, we can also start a production build locally, which i uitlitzed a tool to visualise bundle size with.
