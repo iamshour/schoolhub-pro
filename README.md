@@ -51,4 +51,4 @@ pnpm run dev
 
 ### Production
 
-Whilst the app is already deployed on Vercel, we can also start a production build locally, which i uitlitzed a tool to visualise bundle size with.
+While the app is already deployed on Vercel, we can also start a production build locally, which i uitlitzed a tool to visualise bundle size with.
